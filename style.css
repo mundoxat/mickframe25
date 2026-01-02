@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    linear-gradient(rgba(10,15,30,.9),rgba(10,15,30,.9)),
+    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* NEON */
+.neon-border {
+  padding: 4px;
+  border-radius: 24px;
+  background: linear-gradient(
+    270deg,
+    #7c3aed,
+    #22d3ee,
+    #a855f7,
+    #7c3aed
+  );
+  background-size: 600% 600%;
+  animation: neon 6s linear infinite;
+}
+
+@keyframes neon {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* FRAME */
+.frame {
+  width: 1100px;
+  background: rgba(15,23,42,.95);
+  border-radius: 20px;
+  padding: 40px;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* PROFILE */
+.profile {
+  max-width: 420px;
+}
+
+.avatar-ring {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg,#a855f7,#22d3ee);
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+h1 {
+  margin: 16px 0 4px;
+}
+
+.role {
+  color: #a855f7;
+}
+
+.id {
+  display: block;
+  font-weight: bold;
+}
+
+.loc {
+  font-size: 13px;
+  opacity: .8;
+}
+
+.find {
+  margin: 14px 0;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #7c3aed;
+  color: #fff;
+  cursor: pointer;
+}
+
+.bio {
+  font-size: 14px;
+  opacity: .9;
+}
+
+.social span {
+  margin-right: 10px;
+}
+
+/* ABOUT */
+.about {
+  background: #111827;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.about h2 {
+  margin-top: 0;
+}
+
+.about-actions {
+  margin-top: 16px;
+}
+
+.about-actions button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #1e293b;
+  color: #fff;
+  cursor: pointer;
+}
+
+.about-actions button:hover {
+  background: #22d3ee;
+  color: #000;
+}
+
+/* FRIENDS */
+.friends {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.friends-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.friend {
+  width: 120px;
+  opacity: .6;
+}
+
+.friend.active {
+  opacity: 1;
+}
+
+.friend img {
+  width: 100%;
+  border-radius: 12px;
+  border: 3px solid #7c3aed;
+}
+
+.friend span {
+  display: block;
+  margin-top: 6px;
+}
